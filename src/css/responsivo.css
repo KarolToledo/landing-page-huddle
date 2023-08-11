@@ -1,7 +1,13 @@
 @media(max-width: 1080px) {
     body {
-        background-image: url('src/images/bg-mobile.svg') center center no-repeat;
+        background-image: url('../images/bg-mobile.svg');
+        background-repeat: no-repeat;
         background-color: hsl(257, 40%, 49%);
+        height: 100vh;
+    }
+
+    .cabecalho, .informacoes, .footer{
+       margin: 0 30px;
     }
 
     .cabecalho .logo {
@@ -9,37 +15,52 @@
     }
 
     .container .informacoes {
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 1rem;
     }
 
-    .container .informacoes .imagem .img-mockup{
-        width: 100%;
+    .container .informacoes .imagem{
+       width: 100%;
     }
 
     .container .informacoes .descricao {
-        justify-content: center;
-        align-items: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
         margin-top: 2rem;
+        align-items: center;
     }
 
     .container .informacoes .descricao .title {
         font-size: 1.5rem;
+        text-align: center;
     }
 
     .container .informacoes .descricao .text {
         font-size: 0.8rem;
+        max-width: 700px;
+        text-align: center;
     }
 
     .container .informacoes .descricao .button {
-        margin: 0;
-        justify-content: center;
-        margin-bottom: 2rem;
+        margin-bottom: 60px;
     }
 
-    .footer {
+    .footer{
+        align-items: center;
         justify-content: center;
+    }
+
+    .footer .redes-sociais ul {
+        justify-content: center;
+        margin: 0;
+    }
+}
+
+@media(max-width: 1440px){
+    body{
+       margin: 0 auto;
     }
 }

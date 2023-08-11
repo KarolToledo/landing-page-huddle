@@ -1,65 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
 
 body {
-    max-height: 100vh;
+    height: 100vh;
     font-family: 'Poppins', sans-serif;
     font-size: 62.5%;
-    background-image: url('src/imagens/bg-desktop.svg') center center no-repeat;
+    background-image: url('../images/bg-desktop.svg');
+    background-size: cover;
     background-color: hsl(257, 40%, 49%);
 }
 
+.container, .cabecalho, .footer{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 .cabecalho .logo {
-    max-width: 214px;
+    max-width: 235px;
     max-height: 160px;
-    margin-left: 68px;
+    margin: 20px 0 45px 0;
+    padding-left: 20px;
 }
 
 .container .informacoes {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 69px;
 }
 
 .container .informacoes .imagem {
-    max-width: 100rem;
-    padding-top: 27px;
+    width: 60%;
+    margin: 35px 25px ;
 }
 
-.container .informacoes .descricao{
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
+.container .informacoes .descricao {
+    margin-top: 55px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px 25px 0 25px;
 }
 
 .container .informacoes .descricao .title {
+    text-align: center;
     font-size: 2.4rem;
     font-weight: 600;
-    padding-left: 3.7rem;
+    max-width: 80%;
 }
 
 .container .informacoes .descricao .title,
 .container .informacoes .descricao .text {
     color: #fff;
-    margin-bottom: 1.8rem;
 }
 
 .container .informacoes .descricao .text {
+    text-align: left;
+    max-width: 95%;
     font-size: 1rem;
-    padding-left: 3.7rem; 
+    margin: 25px 0;
 }
 
 .container .informacoes .descricao .button {
     background-color: #fff;
     color: hsl(257, 40%, 49%);
     font-size: 1rem;
-    padding: 1.3rem;
+    padding: 1.2rem;
+    letter-spacing: 2px;
     width: 12.6rem;
     border-radius: 3rem;
-    border: hsl(257, 40%, 49%);
-    box-shadow: 1px 1px 3px 1px rgb(41, 1, 39);
-    margin-left: 4rem;
-    margin-bottom: 5.6rem;
+    border: none;
+    box-shadow: 1px 3px 5px 4px hsla(257, 38%, 15%, 0.404);
+    transition: 0.3s ease-in-out;
+    margin-top: 4px;
+    margin-left: 5px;
 }
 
 .container .informacoes .descricao .button:hover {
@@ -68,25 +79,33 @@ body {
     color: #fff;
 }
 
-.footer {
+.footer .redes-sociais ul {
     display: flex;
     justify-content: flex-end;
-    padding: 0 2rem 2rem 0;
+    margin-right: 34px;
+    padding-bottom: 30px;
 }
 
-.footer .icon {
+.footer .redes-sociais ul li{
+    text-align: center;
     border: 1px solid #fff;
     border-radius: 50%;
-    color: #fff;
-    text-align: center;
-    margin-left: 1rem;
+    margin-left: 18px;
     width: 2.5rem;
-    height: 2.5rem;
-    font-size: 1rem;
-    padding: 0.5rem;
+    font-size: 1.1rem;
+    padding: 0.4rem; 
+    transition: 0.3 ease-in-out;
 }
 
-.footer .icon:hover {
-    color: hsl(300, 69%, 71%);
+.footer .redes-sociais ul li .icon{
+    color: #fff;
+}
+
+.footer .redes-sociais ul li:hover{
+    cursor: pointer;
     border: 1px solid hsl(300, 69%, 71%);
+}
+
+.footer .redes-sociais ul li .icon:hover{
+    color: hsl(300, 69%, 71%);
 }
